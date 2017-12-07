@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"webpack\" \"light-server -c lightserver.json\" \"opener http://localhost:9090\"",
+    "dev": "light-server -c lightserver.json"
   },
   "author": "Zlepper",
   "license": "MIT",
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.3",
+    "concurrently": "^3.5.1",
     "file-loader": "^0.11.1",
+    "light-server": "^1.1.10",
+    "opener": "^1.4.3",
     "source-map-loader": "^0.2.1",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1"

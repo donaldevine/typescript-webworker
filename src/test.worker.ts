@@ -1,6 +1,9 @@
-console.log('hello from a webworker');
 
-addEventListener('message', (message) => {
-    console.log('in webworker', message);
-    postMessage('this is the response ' + message.data);
-});
+let doStuff = function(): void { 
+            
+    postMessage('this message is from the worker: '+ (new Date).getTime());
+    
+ };
+
+
+setInterval(doStuff, 1000);

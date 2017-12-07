@@ -6,7 +6,8 @@
     "lib": [
       "webworker",
       "es6",
-      "scripthost"
+      "scripthost",
+      "dom"
     ]
   },
   "exclude": [
